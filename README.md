@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=narendraktw_react-reduxtoolkit-movie-app)](https://sonarcloud.io/dashboard?id=id=narendraktw_react-reduxtoolkit-movie-app)
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=narendraktw_react-reduxtoolkit-movie-app)](https://sonarcloud.io/dashboard?id=narendraktw_react-reduxtoolkit-movie-app)
 
 This project uses the [SonarCloud Pipe for Bitbucket Pipelines](https://bitbucket.org/sonarsource/sonarcloud-scan) to trigger the analysis. Bitbucket Pipelines is configured to build and analyze all branches and pull requests.
 
