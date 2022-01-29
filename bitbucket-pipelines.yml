@@ -13,7 +13,7 @@ definitions:
           - node
           - sonar
         script:
-          - npm install --quiet
+          - npm install
           - npm run test -- --code-coverage --no-watch --no-progress --browsers=ChromeHeadlessNoSandbox  
           - pipe: sonarsource/sonarcloud-scan:1.2.0
             variables:
