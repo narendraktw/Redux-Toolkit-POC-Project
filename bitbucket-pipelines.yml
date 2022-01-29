@@ -11,7 +11,7 @@ definitions:
           - sonar
         script:
           - pipe: sonarsource/sonarcloud-scan:1.2.1
-    # - step: &check-quality-gate-sonarcloud
+    #- step: &check-quality-gate-sonarcloud
     #     name: Check the Quality Gate on SonarCloud
     #     script:
     #       - pipe: sonarsource/sonarcloud-quality-gate:0.1.4
@@ -20,8 +20,8 @@ pipelines: # More info here: https://confluence.atlassian.com/bitbucket/configur
   branches:
     master:
       - step: *build-test-sonarcloud
-      - step: *check-quality-gate-sonarcloud
+      #- step: *check-quality-gate-sonarcloud
   pull-requests:
     "**":
       - step: *build-test-sonarcloud
-      - step: *check-quality-gate-sonarcloud
+      #- step: *check-quality-gate-sonarcloud
