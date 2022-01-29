@@ -1,11 +1,21 @@
+# Template docker-push
+
+# This template allows you to build and push your docker image to a Docker Hub account.
+# The workflow allows running tests, code linting and security scans on feature branches (as well as master).
+# The docker image will be validated and pushed to the docker registry after the code is merged to master.
+
+# Prerequisites: $DOCKERHUB_USERNAME, $DOCKERHUB_PASSWORD setup as deployment variables
+
+image: atlassian/default-image:3
+
 pipelines:
-  branches: # Branch-specific pipelines definitions
+  branches:
     master:
-        step: A
-          name: Build and test the app
-          image: node:latest
+      - step:
+          name: Build and Test
           script:
-              npm install
-              npm run test
-              npm run build
-  custom: # Pipeline that only runs manually
+           - npm install
+             - npm run test
+             - npm run build
+       
+    
