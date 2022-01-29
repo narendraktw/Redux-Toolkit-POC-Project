@@ -1,8 +1,13 @@
-pipelines: 
-  branches: 
-    master: 
-      - step: 
-          name: "Build and Test"
-          script: 
-            - npm install - npm run test - npm run build
-            
+clone:
+  depth: full    # SonarCloud scanner needs the full history to assign issues properly
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build and Test
+          script:
+           - npm install
+             - npm run test
+             - npm run build       
+            - pipe: sonarsource/sonarcloud-scan:1.2.1
+            - pipe: sonarsource/sonarcloud-quality-gate:0.1.4
