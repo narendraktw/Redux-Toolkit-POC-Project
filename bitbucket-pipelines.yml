@@ -1,5 +1,5 @@
 clone:
-  depth: full    # SonarCloud scanner needs the full history to assign issues properly
+  depth: full 
 pipelines:
   branches:
     master:
